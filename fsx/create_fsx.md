@@ -50,4 +50,11 @@ On the create data repository association page, choose a file path name (anythin
 
 <img width="667" alt="image" src="https://github.com/jmtroywork/gptchatanswers/assets/121819229/c1d672ad-2893-4edf-8d7a-ea36a33b1de2">
 
-Create EC2 instances to test connection. Associate the FSx security group to the EC2
+Create EC2 instances to test connection. Associate the FSx security group to the EC2. The EC2 has to be in the same VPC as the file system, but can be in a different Availibility Zone (AZ).  Importantly the FSx client needs to be installed on the EC2, see here for more information: https://docs.aws.amazon.com/fsx/latest/LustreGuide/install-lustre-client.html
+
+For my tests I used Amazon Linux 2 EC2s.
+
+The above steps worked in the console when using the AWS root login.  The AWS documentation hints that there may be issues with associating a file system to an s3 repository if using a different AWS console login with different permissions.
+
+
+
