@@ -54,7 +54,7 @@ Create EC2 instances to test connection. Associate the FSx security group to the
 
 For my tests I used Amazon Linux 2 EC2s.
 
-The above steps worked in the console when using the AWS root login.  The AWS documentation hints that there may be issues with associating a file system to an s3 repository if using a different AWS console login with different permissions.
+The above steps worked in the console when using the AWS root login.  The AWS documentation hints that there may be issues with associating a file system to an s3 repository if using a different AWS console login with different permissions.  The above also worked with my admin1 login when I created the data repostitory association AFTER the file system was created.  Last week I could not mount the file system on an ec2 (was stuck mounting) when the repository association was done AT THE SAME TIME as file system creation. ?? Bug in AWS?? Did I do something wrong??
 
 
 
